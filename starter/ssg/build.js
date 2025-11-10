@@ -18,7 +18,7 @@ const distPath = path.join(__dirname, "dist");
 
 const shell = readFileSync(path.join(__dirname, "index.html"), "utf8");
 
-const app = renderToStaticMarkup(h(App));
+const app = renderToStaticMarkup(h(App)); // use renderToStaticMarkup for static HTML
 const html = shell.replace("<!-- ROOT -->", app);
 
 if (!existsSync(distPath)) {
